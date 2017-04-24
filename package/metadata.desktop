@@ -1,0 +1,27 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Nomad Notifications
+Name[x-test]=xxNomad Notificationsxx
+Comment=Display notifications, jobs and devices
+Comment[x-test]=xxDisplay notifications, jobs and devicesxx
+
+Type=Service
+Icon=preferences-desktop-notification
+X-KDE-ParentApp=
+X-KDE-PluginInfo-Author=Alexis López Zubieta
+X-KDE-PluginInfo-Email=azubieta90@gmail.com
+X-KDE-PluginInfo-Category=Tasks
+X-KDE-PluginInfo-License=GPL
+X-KDE-PluginInfo-Name=org.nomad.notifications
+X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-Website=
+X-KDE-ServiceTypes=Plasma/Applet
+X-Plasma-API=declarativeappletscript
+X-Plasma-Provides=org.nomad.notifications
+X-KDE-PluginInfo-EnabledByDefault=true
+X-KDE-Library=nomad_applet_notifications
+
+X-Plasma-MainScript=ui/main.qml
+X-Plasma-RequiredExtensions=LaunchApp
+X-Plasma-NotificationArea=true
+X-Plasma-NotificationAreaCategory=ApplicationStatus
