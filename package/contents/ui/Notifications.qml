@@ -67,6 +67,8 @@ Column {
             notificationsModel.remove(notificationsModel.count-1)
         }
 
+        /* NOMAD: Persist every notification */
+        notification.isPersistent = true
         if (notification.isPersistent) {
             notification.created = new Date();
 
