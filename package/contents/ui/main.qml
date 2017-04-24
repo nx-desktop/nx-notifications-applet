@@ -107,17 +107,54 @@ MouseEventListener {
         imagePath: "widgets/configuration-icons"
     }
 
-    PlasmaExtras.Heading {
-        width: parent.width
-        level: 3
-        opacity: 0.6
-        visible: notificationsApplet.totalCount == 0
-        text: i18n("No new notifications.")
+
+    RowLayout {
+        id: header
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.top: parent.top
+
+        PlasmaExtras.Heading {
+            width: parent.width
+            level: 3
+            opacity: 0.6
+            visible: notificationsApplet.totalCount == 0
+            text: i18n("No new notifications.")
+        }
+
+        PlasmaExtras.Heading {
+            text: i18n("Notifications")
+            level: 3
+
+            visible: notificationsApplet.totalCount != 0
+            Layout.fillWidth: true
+        }
+
+        PlasmaComponents.ToolButton {
+            iconName: "edit-clear-all-symbolic"
+            text: i18n("Clear all")
+            Layout.alignment: Qt.AlignRight
+
+            visible: notificationsApplet.totalCount != 0
+            onClicked: action_clearNotifications();
+        }
+
+        PlasmaComponents.ToolButton {
+            iconName: "adjustlevels"
+            tooltip: i18n("Configure Event Notifications and Actions...")
+            Layout.alignment: Qt.AlignRight
+
+            onClicked: action_notificationskcm();
+        }
     }
 
     PlasmaExtras.ScrollArea {
         id: mainScrollArea
-        anchors.fill: parent
+
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.top: header.bottom
+        anchors.bottom: parent.bottom
 
         implicitWidth: theme.mSize(theme.defaultFont).width * 40
         implicitHeight: Math.min(theme.mSize(theme.defaultFont).height * 40, Math.max(theme.mSize(theme.defaultFont).height * 6, contentsColumn.height))
