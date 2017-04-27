@@ -38,7 +38,7 @@ MouseEventListener {
 //    Layout.minimumWidth: mainScrollArea.implicitWidth
 //    Layout.minimumHeight: mainScrollArea.implicitHeight
     Layout.minimumWidth: 256 // FIXME: use above
-    Layout.minimumHeight: 256
+    Layout.minimumHeight: 256 * 2
     Layout.maximumWidth: -1
     Layout.maximumHeight: mainScrollArea.implicitHeight
 
@@ -154,7 +154,7 @@ MouseEventListener {
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.top: header.bottom
-        anchors.bottom: parent.bottom
+        anchors.bottom: deviceNotifier.top
 
         implicitWidth: theme.mSize(theme.defaultFont).width * 40
         implicitHeight: Math.min(theme.mSize(theme.defaultFont).height * 40, Math.max(theme.mSize(theme.defaultFont).height * 6, contentsColumn.height))
@@ -206,6 +206,17 @@ MouseEventListener {
                 }
             }
         ]
+    }
+
+    Devicenotifier {
+        id: deviceNotifier
+        anchors {
+            left: parent.left
+            right: parent.right
+            bottom: parent.bottom
+        }
+
+        implicitHeight: theme.mSize(theme.defaultFont).height * 10
     }
 
     function action_clearNotifications() {
