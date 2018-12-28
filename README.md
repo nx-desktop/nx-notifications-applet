@@ -1,4 +1,4 @@
-# NX Notifications Applet [![Build Status](https://travis-ci.org/nomad-desktop/nomad-notifications-applet.svg?branch=master)](https://travis-ci.org/nomad-desktop/nomad-notifications-applet)
+# NX Notifications Applet [![Build Status](https://travis-ci.org/nx-desktop/nx-notifications-applet.svg?branch=master)](https://travis-ci.org/nx-desktop/nx-notifications-applet)
 
 This is the repository for the notifications center used in Nitrux.
 
