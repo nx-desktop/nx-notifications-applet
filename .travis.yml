@@ -1,38 +1,33 @@
 sudo: required
-
 services:
-  - docker
-
+- docker
 addons:
   apt:
     packages:
-      - realpath
-
+    - realpath
 install:
-  - docker pull ubuntu:bionic
-  - wget https://raw.githubusercontent.com/nomad-desktop/nxos-repository-util/master/nxos-repository-util.sh -O nxos-repository-util.sh
-  - chmod +x nxos-repository-util.sh
-
+- docker pull ubuntu:bionic
+- wget https://raw.githubusercontent.com/nomad-desktop/nxos-repository-util/master/nxos-repository-util.sh
+  -O nxos-repository-util.sh
+- chmod +x nxos-repository-util.sh
 script:
- - docker run --rm -v $(pwd)/:/build/ -w /build/ ubuntu:bionic /bin/bash travis-build.sh
-
+- docker run --rm -v $(pwd)/:/build/ -w /build/ ubuntu:bionic /bin/bash travis-build.sh
 branches:
   only:
-    - master
-    - development
-
+  - master
+  - development
 deploy:
-  - provider: script
-    script: ./source/nxos-repository-util.sh upload testing *.deb
-    skip_cleanup: true
-    on:
-      branch: master
-      
-  - provider: script
-    script: ./source/nxos-repository-util.sh upload development *.deb
-    skip_cleanup: true
-    on:
-      branch: development
-
+- provider: script
+  script: "./source/nxos-repository-util.sh upload testing *.deb"
+  skip_cleanup: true
+  on:
+    branch: master
+- provider: script
+  script: "./source/nxos-repository-util.sh upload development *.deb"
+  skip_cleanup: true
+  on:
+    branch: development
 notifications:
   email: false
+  slack:
+    secure: 2d4LvQAQuCA8607SWNwqXu/qZoVsWLXm7QqbEyDUj7/qOk+tnBU/BRV0e8s7VQmUxjpjW6RyINF4DEfwHt8YGDV5lquVBuK4CbNTv+kX0IlxyzqkbEDy2tZL2U3l10LRYnf55EuMB9EhcAuCEQJ9SvOXVQHPbpPVICwc2OPa4H1qA+R4L3VWIATHfVyBEr3F5/rh2l6F4UIwy5rHOZU4MT/nCL5jV22NUoSb4wgax3tOOQrinL0z0l5DX9iXy8pqnGe2mU9BKu5YtXivj8552vbU6Z/mPsvvXRR8MVA+B0sIWnlGxgCxeVLfFXNKux72ZPHGiITXLTCrSI+YAubp3/NKq0IQTjU2bY/kI+yfJO5PwOYlLdYP3ebe4zO7Zmu9YGjra3b1qHjiAOke/tjDx1ljkDS9C3Saev6kQn+lvbLk130PG05WjnwFfpCaYo5Gi9GZz6R62Eo5aCCC3Gv2qus06iyMbDziOd/ABdGqJ4Du9PD7HDm2cPu7oUwWqzP6meypJz5BoTygyQcpMllz8SJ01uyYpKWRqJ8TWJfXyx6U15J7JpZooNEaWKdjvbo3xcF9zT/EMIHWN4uZj0pgyjPIg9kkos5l+PN3koyMir1oeYCCsGPQbmI4BG9YzGt3wvCRMVMY2iqmLSSOdDyKU18tli/Lu/mJ3jWjb7jmwbg=
