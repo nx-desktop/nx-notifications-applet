@@ -1,14 +1,13 @@
 Source: nx-notifications-applet
 Section: KDE
 Priority: optional
-Maintainer: Alexis López Zubieta <azubieta90@gmail.com>
+Maintainer: Uri Herrera <uri_herrera@nxos.org>
 Build-Depends: debhelper (>=9), cmake, extra-cmake-modules, libkf5i18n-dev, plasma-framework-dev, qtbase5-dev, qtdeclarative5-dev, libkf5windowsystem-dev, kio-dev
 Standards-Version: 3.9.6
-#Vcs-Git: git://anonscm.debian.org/collab-maint/nomad-notifications-applet.git
-#Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/nomad-notifications-applet.git
 
 Package: nx-notifications-applet
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Depends: ${shlibs:Depends}, ${misc:Depends}, plasma-workspace
+Description: Notifications manager for Nitrux
+ NX Notifications is the notification manager 
+ used in NX Desktop on Nitrux.

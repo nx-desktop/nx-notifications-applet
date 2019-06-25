@@ -26,7 +26,7 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 import org.kde.kquickcontrolsaddons 2.0
 
-import org.nomad.private.notifications 1.0 as Notifications
+import org.nx.private.notifications 1.0 as Notifications
 
 ListView {
     id: previewList

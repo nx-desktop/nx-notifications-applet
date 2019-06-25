@@ -26,7 +26,7 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
-import org.nomad.private.notifications 1.0
+import org.nx.private.notifications 1.0
 
 import "uiproperties.js" as UiProperties
 

@@ -24,7 +24,7 @@ import QtQuick.Layouts 1.1 as QtLayouts
 import QtQuick.Window 2.2
 import org.kde.plasma.core 2.0 as PlasmaCore
 
-import org.nomad.private.notifications 1.0
+import org.nx.private.notifications 1.0
 
 Item {
     id: appearancePage

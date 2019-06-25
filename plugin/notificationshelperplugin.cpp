@@ -53,7 +53,7 @@ static QObject *urlcheck_singletontype_provider(QQmlEngine *engine, QJSEngine *s
 
 void NotificationsHelperPlugin::registerTypes(const char *uri)
 {
-    Q_ASSERT(uri == QLatin1String("org.nomad.private.notifications"));
+    Q_ASSERT(uri == QLatin1String("org.nx.private.notifications"));
 
     qmlRegisterType<NotificationsHelper>(uri, 1, 0, "NotificationsHelper");
     qmlRegisterType<Thumbnailer>(uri, 1, 0, "Thumbnailer");
@@ -63,7 +63,7 @@ void NotificationsHelperPlugin::registerTypes(const char *uri)
 
 void NotificationsHelperPlugin::initializeEngine(QQmlEngine *engine, const char *uri)
 {
-    Q_ASSERT(uri == QLatin1String("org.nomad.private.notifications"));
+    Q_ASSERT(uri == QLatin1String("org.nx.private.notifications"));
 
     auto oldFactory = engine->networkAccessManagerFactory();
     engine->setNetworkAccessManagerFactory(nullptr);

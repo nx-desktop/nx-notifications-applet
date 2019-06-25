@@ -1,2 +1,2 @@
-module org.nomad.private.notifications
+module org.nx.private.notifications
 plugin notificationshelperplugin

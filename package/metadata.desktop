@@ -1,7 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
-Name=Nx Notifications
-Name[x-test]=xxNx Notificationsxx
+Name=NX Notifications
+Name[x-test]=xxNX Notificationsxx
 Comment=Display notifications, jobs and devices
 Comment[x-test]=xxDisplay notifications, jobs and devicesxx
 
@@ -12,14 +12,14 @@ X-KDE-PluginInfo-Author=Alexis López Zubieta
 X-KDE-PluginInfo-Email=azubieta90@gmail.com
 X-KDE-PluginInfo-Category=Tasks
 X-KDE-PluginInfo-License=GPL
-X-KDE-PluginInfo-Name=org.nomad.notifications
+X-KDE-PluginInfo-Name=org.nx.notifications
 X-KDE-PluginInfo-Version=1.0
 X-KDE-PluginInfo-Website=
 X-KDE-ServiceTypes=Plasma/Applet
 X-Plasma-API=declarativeappletscript
-X-Plasma-Provides=org.nomad.notifications
+X-Plasma-Provides=org.nx.notifications
 X-KDE-PluginInfo-EnabledByDefault=true
-X-KDE-Library=nomad_applet_notifications
+X-KDE-Library=nx_applet_notifications
 
 X-Plasma-MainScript=ui/main.qml
 X-Plasma-RequiredExtensions=LaunchApp

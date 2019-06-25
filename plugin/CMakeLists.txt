@@ -13,6 +13,6 @@ target_link_libraries(notificationshelperplugin Qt5::Core
                                                 KF5::I18n
                                                 )
 
-install(TARGETS notificationshelperplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/nomad/private/notifications)
+install(TARGETS notificationshelperplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/nx/private/notifications)
 
-install(FILES qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/nomad/private/notifications)
+install(FILES qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/nx/private/notifications)

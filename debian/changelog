@@ -1,3 +1,9 @@
+nx-notifications-applet (1.0.1) nxos; urgency=medium
+
+  * Update.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Tue, 25 Jun 2019 18:53:00 -0500
+ 
 nx-notifications-applet (1.0.0-1) unstable; urgency=medium
 
   * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
