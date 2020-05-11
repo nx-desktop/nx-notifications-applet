@@ -2,8 +2,6 @@
 
 This is the repository for the notifications center used in Nitrux.
 
-![](https://i.imgur.com/zu5nhs6.png)
-
 # Requirements
 - Qt 5.8+.
 - Qml.
