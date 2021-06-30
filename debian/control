@@ -1,8 +1,8 @@
 Source: nx-notifications-applet
-Section: KDE
+Section: kde
 Priority: optional
 Maintainer: Uri Herrera <uri_herrera@nxos.org>
-Build-Depends: debhelper (>=9), cmake, extra-cmake-modules, libkf5i18n-dev, plasma-framework-dev, qtbase5-dev, qtdeclarative5-dev, libkf5windowsystem-dev, kio-dev
+Build-Depends: debhelper (>=9), cmake, extra-cmake-modules, libkf5i18n-dev, libkf5plasma-dev, qtbase5-dev, qtdeclarative5-dev, libkf5windowsystem-dev, libkf5kio-dev
 Standards-Version: 3.9.6
 
 Package: nx-notifications-applet
